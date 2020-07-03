@@ -1,0 +1,30 @@
+function Star_a_d_pair(K_vector,star_lib_total,D) %a_d即角距
+%先不做这个图了
+
+[s1,s2]=size(star_lib_total);
+[NumS,~]=size(K_vector);
+Y1=[star_lib_total(1,3),star_lib_total(s1,3)];
+X=Y1(1):D:Y1(2);
+y=(X-Y1(1))/D +1;%肯定为整数
+Y=[];
+for i=1:y(end-1)
+    y1=K_vector{i,1};
+    [y2,~]=size(y1);
+    Y=[Y,y2];
+end
+Y=[Y,10];
+plot(X,Y);
+set(gca,'GridLineStyle','-','GridColor','k','GridAlpha',1);%
+title('导航星分布示意图')
+xlabel('赤经/度')
+ylabel('赤纬/度')
+% [sy1,sy2]=size(y);
+% y1=K_vector{1:sy1,1};
+% [Y,~]=size(y1);
+                                                            %  x = Y1:D:Yn;
+                                                            % y = (x-Y1)/D;%K_cell行数
+                                                            % 
+                                                            % plot(x,y,'DurationTickFormat','mm:ss')
+% 做一个点画图和曲线图
+end
+
