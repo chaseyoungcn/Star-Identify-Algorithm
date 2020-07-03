@@ -1,2 +1,3 @@
 # StarSearch
-this project is math modeling in 2019
+时间有限，实现的可能太粗鲁。
+可以参考论文，优化一下
